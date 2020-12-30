@@ -1,0 +1,15 @@
+AC_INIT([open-a-data-file1], [1.0], [bug-automake@gnu.org])
+
+dnl PKG_CHECK examples
+dnl PKG_CHECK_MODULES([SQLITE], [sqlite3])
+dnl PKG_CHECK_MODULES([GTK], [gtk+-3.0])
+
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AC_PROG_CC
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_FILES([
+ Makefile
+ src/Makefile
+ data/Makefile
+])
+AC_OUTPUT
