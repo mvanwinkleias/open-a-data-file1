@@ -10,6 +10,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
  Makefile
  data/Makefile
+ data/text/Makefile
  src/Makefile
 ])
 AC_OUTPUT

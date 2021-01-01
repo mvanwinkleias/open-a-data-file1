@@ -7,7 +7,7 @@ int main (void) {
 
 	FILE *file_pointer; 
 	char c;
-	char * file_name = DATADIR "/blah.txt";
+	char * file_name = DATADIR "/text/blah.txt";
 	puts ("File name: ");
 	puts(file_name);
 	file_pointer = fopen(file_name, "r"); 
