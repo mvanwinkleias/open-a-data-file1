@@ -13,4 +13,8 @@ AC_CONFIG_FILES([
  data/text/Makefile
  src/Makefile
 ])
+AC_CONFIG_MACRO_DIRS([m4])
+
+LT_INIT
+
 AC_OUTPUT
