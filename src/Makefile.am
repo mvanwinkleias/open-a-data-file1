@@ -8,10 +8,6 @@ else
 datadir_path = $(pkgdatadir)
 endif
 
-if conditional_wanted_datadir_path
-datadir_path = $(wanted_datadir_path)
-endif
-
 # These might be a good idea
 .POSIX:
 AM_CFLAGS = -std=c99 -pedantic -D_POSIX_C_SOURCE=200809L -Wall -Wextra -DDATADIR=\"$(datadir_path)\"
