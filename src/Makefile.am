@@ -2,7 +2,7 @@
 ###### Determine where to load data files from
 # Can't nest ifeq statements(?)
 # Shouldn't use := as it's not portable
-if conditional_use_project_data_dir
+if conditional_use_project_datadir
 selected_datadir_path = $(srcdir)/../data
 else
 selected_datadir_path = $(pkgdatadir)

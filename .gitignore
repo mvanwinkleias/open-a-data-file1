@@ -19,7 +19,7 @@ config.log
 config.status
 src/.deps/
 src/Makefile
-src/open_a_data_file1
+src/open-a-data-file1
 src/*.o
 stamp-h1
 
