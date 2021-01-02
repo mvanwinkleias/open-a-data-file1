@@ -23,6 +23,8 @@ src/open-a-data-file1
 src/*.o
 stamp-h1
 
+libtool
+
 doc/.dirstamp
 doc/open_a_data_file1.info
 doc/stamp-vti
