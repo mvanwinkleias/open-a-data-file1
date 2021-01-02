@@ -2,10 +2,10 @@ AC_INIT([open-a-data-file1], [1.0], [bug-automake@gnu.org])
 
 
 AC_ARG_VAR(wanted_datadir_path, Overrides the decision to use -DDATADIR=pkgdatadir)
-AM_CONDITIONAL([conditional_empty_datadir_path], [test "$datadir_path" -eq ""])
+AM_CONDITIONAL([conditional_wanted_datadir_path], [test "$wanted_datadir_path" -ne ""])
 
 AC_ARG_VAR(use_project_datadir, Set to 1 to use project-dir/data as DATADIR)
-AM_CONDITIONAL([conditional_use_project_datadir], [test "$use_project_data_dir" -eq "1"])
+AM_CONDITIONAL([conditional_use_project_datadir], [test "$use_project_datadir" -eq "1"])
 
 dnl PKG_CHECK examples
 dnl PKG_CHECK_MODULES([SQLITE], [sqlite3])

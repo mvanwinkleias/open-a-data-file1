@@ -3,13 +3,13 @@
 # Can't nest ifeq statements(?)
 # Shouldn't use := as it's not portable
 if conditional_use_project_datadir
-selected_datadir_path = $(srcdir)/../data
+datadir_path = $(srcdir)/../dataha
 else
-selected_datadir_path = $(pkgdatadir)
+datadir_path = $(pkgdatadir)
 endif
 
-if conditional_empty_datadir_path
-datadir_path = $(selected_datadir_path)
+if conditional_wanted_datadir_path
+datadir_path = $(wanted_datadir_path)
 endif
 
 # These might be a good idea
