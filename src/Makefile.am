@@ -1,6 +1,18 @@
+MAKEFILE_PATH := $(strip $(dir $(firstword $(MAKEFILE_LIST))))
+
+###### Determine where to load data files from
+
+ifeq ($(datadir_path),)
+    ifeq ($(use_project_data_dir),1)
+        datadir_path = $(MAKEFILE_PATH)/../data
+    else
+        datadir_path = $(pkgdatadir)
+    endif
+endif
+
 # These might be a good idea
 .POSIX:
-AM_CFLAGS = -std=c99 -pedantic -D_POSIX_C_SOURCE=200809L -Wall -Wextra -DDATADIR=\"$(pkgdatadir)\"
+AM_CFLAGS = -std=c99 -pedantic -D_POSIX_C_SOURCE=200809L -Wall -Wextra -DDATADIR=\"$(datadir_path)\"
 AM_LDFLAGS = 
 
 bin_PROGRAMS = open-a-data-file1
